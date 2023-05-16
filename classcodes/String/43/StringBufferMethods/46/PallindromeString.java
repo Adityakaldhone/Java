@@ -52,7 +52,7 @@ class StringDemo{
 		
 	}
 
-	 void Anagram(String str1 , String str2){
+	 /*void Anagram(String str1 , String str2){
 	
 		int count = 0;
 		int count1 = 0;
@@ -92,7 +92,55 @@ class StringDemo{
 		
 			System.out.println(str1 + " and  " + str2 + " Are Not Anagram Strings");
 	}
-}
+}*/
+	int Anagram(String str1, String str2) {
+
+ 		char arr1[] = str1.toCharArray();
+		char arr2[] = str2.toCharArray();
+
+		if(myLength(str1)==myLength(str2)){
+		
+			for(int i=0;i<arr1.length;i++){
+			
+				for(int j=0;j<arr1.length-1-i;j++){
+				
+					if(arr1[j] > arr1[j+1]){
+					
+						char temp = arr1[j];
+						arr1[j] = arr1[j+1];
+						arr1[j+1] = temp;
+					}
+					if(arr2[j]>arr2[j+1]){
+					
+						char temp = arr2[j];
+						arr2[j] = arr2[j+1];
+						arr2[j+1] = temp;
+					}
+				}
+			}
+			int flag = 0;
+			for(int i=0;i<arr1.length;i++){
+			
+				if(arr1[i] != arr2[i]){
+				
+					flag=1;
+				}
+			}
+			if(flag == 0){
+			
+				System.out.println(str1 + " and  " + str2 + " Are Anagram Strings");
+			}else{
+				System.out.println(str1 + " and  " + str2 + " Are not Anagram Strings");
+			}
+			return 0;
+		}else{
+		
+			
+				System.out.println(str1 + " and  " + str2 + " Are not Anagram Strings");
+		}
+		return 0;
+	}
+	
 
 
 	public static void main(String[]args)throws IOException{
