@@ -62,18 +62,22 @@ class StringDemo{
 
 	if(cnt == cnt1){
 
-		for (int i = 0; i < cnt; i++) {
          		
+		for (int i = 0; i < cnt; i++) {
 		       	 char ch = str1.charAt(i);
-           		 count = (int)ch;
+           		 count = count + ((int)ch);
+			 System.out.println(count+"1");
+			 
         	}
 		
+			 System.out.println(count+"1");
 		for (int i = 0; i < cnt1; i++) {
          		
-		       	 char ch = str1.charAt(i);
-           		 count1 = (int)ch;
+		       	 char ch = str2.charAt(i);
+           		 count1 = count1 +((int)ch);
         	}
 		
+			 System.out.println(count+"2");
 		if(count == count1){
 		
 			System.out.println(str1 + " and  " + str2 + " Are Anagram Strings");
