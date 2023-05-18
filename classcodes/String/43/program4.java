@@ -17,10 +17,8 @@ class States{
 		float LitracyRate = 99.99f;
 		float GDP = 9.0f;
 		double Budget = 9800000000000000.0;
-		
-		States obj = new States();
-
-		System.out.println("Budget = "+obj.Budget);
+	
+		System.out.println("Budget = "+Budget);
 		System.out.println("GDP rate = "+GDP);
 		System.out.println("Litracy Rate = "+LitracyRate);
 
