@@ -3,10 +3,10 @@ class player{
 	private int jerNo = 0;
 	private String name = null;
 
-	player(int jerNo,String name){
+	player(){
 	
-		this.jerNo = jerNo;
-		this.name = name;
+/*		this.jerNo = jerNo;
+		this.name = name;*/
 	}
 
 	void info(){
@@ -18,13 +18,13 @@ class Client {
 
 	public static void main(String[]args){
 	
-		player obj1 = new player(7,"MSDhoni");           //player(obj1)
+		player obj1 = new player();           //player(obj1)
 		obj1.info();
 		
-		player obj2 = new player(18,"Virat");           //player(obj2)
+		player obj2 = new player();           //player(obj2)
 		obj2.info();
 		
-		player obj3 = new player(8,"Jaddu");           //player(obj3)
+		player obj3 = new player();           //player(obj3)
 		obj3.info();
 	}
 }
